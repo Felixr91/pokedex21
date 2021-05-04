@@ -7,6 +7,7 @@ import ChangePokemon from './components/ChangePokemon'
 import Sprite from './components/Sprite'
 import PokemonName from './components/PokemonName';
 import Navigation from './components/Navigation';
+import SearchComplete from './components/SearchComplete';
 
 const App = () =>{
   const [name, setCurrentPoke] = useState('Pikachu')
@@ -43,12 +44,13 @@ const App = () =>{
     <div className="App">
       <CssBaseline/>
 
-      <Navigation></Navigation>
+    
 
       <header className="App-header">
 
     
       <ChangePokemon onUpdate={updatePokemon}/>
+      <SearchComplete></SearchComplete>
 
       <PokemonName data = {name}/>
 
