@@ -1,9 +1,12 @@
-const Sprite = (id) => {
-        
+import { useState } from 'react'
+
+const Sprite = (props) => {
+
+    const [imgSource, setImageSource] = useState('')    
 
     return (
         <div>
-            <img className='sprite' style={{height: "250px"}} alt='poke sprite' src={('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + id.data + '.png')}></img>
+            <img className='sprite' style={{height: "100px"}} alt='poke sprite' src={('https://img.pokemondb.net/sprites/black-white/anim/normal/' + props.data + '.gif')}></img>
             
         </div>
     )

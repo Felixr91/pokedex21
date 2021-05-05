@@ -14,14 +14,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: rgb(255,23,2);
+  background: linear-gradient(120deg, rgba(255,23,2,1) 0%, rgba(245,95,95,1) 30%, rgba(112,142,245,1) 68%, rgba(0,63,255,1) 100%);  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 10px;
 }
 
 .App-link {
@@ -35,4 +36,58 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.table-container{
+  width: 97%;
+  min-width: 320px;
+  max-width: 500px
+}
+
+.flavor-container p{
+  color: black;
+  margin-top: 20px;
+}
+
+.change-Pokemon{
+  display: flex;
+  
+}
+
+.btn{
+  min-width: 50px;
+}
+
+input[type="submit"]{
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+.poke-name{
+  color: black;
+  margin-bottom: 10px;
+}
+
+.table-container{
+  background-color: #0000004a;
+  border-radius: 5px 5px 5px 5px;
+  margin-top: 10px;
+}
+
+.flavor-container{
+  /* background-color: #0000004a; */
+  border-radius: 0px 0px 5px 5px;
+}
+
+.flavor-container p{
+  color: white;
+  padding: 0px 10px 10px 10px;
+}
+
+.MuiTableCell-alignCenter{
+  color: white !important;
 }

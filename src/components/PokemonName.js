@@ -9,7 +9,7 @@ const PokemonName = (name) => {
 
     return(
         <div>
-            <h1>{formatName()}</h1>
+            <h1 className="poke-name">{formatName()}</h1>
         </div>
     )
 }
