@@ -11,7 +11,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-
+import Button from '@material-ui/core/Button';
 
 
 const App = () =>{
@@ -27,6 +27,7 @@ const App = () =>{
  
 
   useEffect(() => {
+    // fetches names from api for autoComplete component
     const fetchPokeNames = async() =>{
       try{
         const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
@@ -45,12 +46,12 @@ const App = () =>{
 
   const updatePokemon = (name) => {
 
-    var str = name.tolower
+    var urlVal = name
 
     const fetchPoke = async(e) => {
       try{
        
-        const res = await fetch('https://pokeapi.co/api/v2/pokemon/' + str)
+        const res = await fetch('https://pokeapi.co/api/v2/pokemon/' + urlVal)
         const data = await res.json()
         const name = data.name
         const pokeID = data.id
@@ -76,6 +77,7 @@ const App = () =>{
       }
     }
 
+
     const fetchFlavorText = async(id)=>{
       const res = await fetch('https://pokeapi.co/api/v2/pokemon-species/'+ id)
       const flavData = await res.json()
@@ -84,8 +86,7 @@ const App = () =>{
       setFlavorText(entry)
     }
     
-
-    fetchPoke(str)
+    fetchPoke(urlVal)
     
   }
 
@@ -95,26 +96,35 @@ const App = () =>{
     
     if(!inputValue){
         alert("Please provide a name from the suggestions")
-        return
     }
-    // for mr.mime string must change to mr-mime
     var tolower = inputValue
 
-    updatePokemon({tolower})
+    updatePokemon(tolower)
 
 
-}
-  
+  }
+
+  const previousPoke = (e) =>{
+    e.preventDefault()
+    var num = currentPokeID - 1
+    updatePokemon(num)
+    console.log(num)
+  }
+
+  const nextPoke = (e) =>{
+    e.preventDefault()
+    var num = currentPokeID + 1
+    updatePokemon(num)
+    console.log(num)
+  }
+
 
   return (
     <div className="App">
       <CssBaseline/>
 
-    
-
       <header className="App-header">
 
-  
         <form className="change-Pokemon" onSubmit={onSubmit}>
 
           <Autocomplete
@@ -171,12 +181,20 @@ const App = () =>{
             </div>
           </div>
 
-
+          <div className="prev-next-row">
+            <Button variant="contained" className="prev-next" onClick={previousPoke}>
+              Previous
+            </Button>
+            <Button variant="contained" className="prev-next" onClick={nextPoke}>
+              Next
+            </Button>
+          </div>        
 
       </header>
-
+        
     </div>
   );
 }
+
 
 export default App;
