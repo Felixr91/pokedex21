@@ -143,7 +143,10 @@ const App = () =>{
             renderInput={(params) => <TextField {...params} label="Search by Name" variant="outlined" />}
           />
 
-          <input type="submit" value="GO" className="btn"></input>
+          
+          <Button type="submit" value="GO" variant="contained" className="go">
+            Go
+          </Button>
         </form>
 
         <PokemonName data = {name}/>
