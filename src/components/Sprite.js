@@ -1,8 +1,4 @@
-import { useState } from 'react'
-
 const Sprite = (props) => {
-
-    const [imgSource, setImageSource] = useState('')    
 
     return (
         <div>

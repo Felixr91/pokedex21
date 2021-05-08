@@ -101,7 +101,6 @@ const App = () =>{
 
     updatePokemon(tolower)
 
-
   }
 
   const previousPoke = (e) =>{
