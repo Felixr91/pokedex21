@@ -8,14 +8,14 @@ Users can search for Pokémon by name or explore Pokémon numerically.
 
 ## APIs used
 
-PokéAPI - https://pokeapi.co/
+### PokéAPI - https://pokeapi.co/
 
 PokéAPI was used to obtain type, bio, height, weight, and number for each pocket monster. 
 
 
-Pokémon Database - https://pokemondb.net/
+### Pokémon Database - https://pokemondb.net/
 
-PokéAPI contains character sprites, however, it does not support animated character sprites. This database was used only to obtain the animated sprite. 
+PokéAPI contains character sprites, however, it does not support animated character sprites. Pokémon Database was used only to obtain the animated sprite. 
 
 # Getting Started with Create React App
 
