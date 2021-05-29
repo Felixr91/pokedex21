@@ -1,3 +1,22 @@
+# 1st Generation Pokedex
+
+What's a Pokédex?
+
+In the classic 90's anime and videogame series, the Pokédex is an electronic encyclopedia containing stats and information on different Pokémon. 
+
+Users can search for Pokémon by name or explore Pokémon numerically. 
+
+## APIs used
+
+PokéAPI - https://pokeapi.co/
+
+PokéAPI was used to obtain type, bio, height, weight, and number for each pocket monster. 
+
+
+Pokémon Database - https://pokemondb.net/
+
+PokéAPI contains character sprites, however, it does not support animated character sprites. This database was used only to obtain the animated sprite. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
