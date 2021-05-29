@@ -2,7 +2,7 @@
 
 What's a Pokédex?
 
-In the classic 90's anime and videogame series, the Pokédex is an electronic encyclopedia containing stats and information on different Pokémon. 
+In the classic 90's anime and videogame series, the Pokédex is an electronic encyclopedia containing stats and information for all 150 Pokémon. 
 
 Users can search for Pokémon by name or explore Pokémon numerically. 
 
